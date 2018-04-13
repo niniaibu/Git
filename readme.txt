@@ -19,8 +19,15 @@ Git is free software distributed under the GPL.
 7. git reset --hard HEAD^ 回到上一版本
                           '^^'表示上上版本,'HEAD~100'表示上100版本
    git reset --hard 75d8c08 回到这个ID的版本
+   git reset HEAD readme.txt 把暂存区的修改回退到工作区
 
-8. git checkout -- readme.txt 文件在工作区的修改全部撤销
-   
+8. git checkout -- readme.txt 文件在工作区的修改全部撤销（1：撤销和版本库一样，2：撤销和暂存区状态一样）
+
+9. cat readme.txt 查看文件内容
+
+
+提交SSH Key到GitHub
+ssh-keygen -t rsa -C "1017578983@qq.com"
+点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容   
    
    
