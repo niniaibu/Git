@@ -28,6 +28,20 @@ Git is free software distributed under the GPL.
 
 提交SSH Key到GitHub
 ssh-keygen -t rsa -C "1017578983@qq.com"
-点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容   
-   
-   
+点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容
+
+关联远程库
+git remote add origin git@github.com:niniaibu/Git.git   
+
+本地库内容推到远程库
+git push -u origin master 加上-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来
+git push origin master 
+
+克隆到本地库
+git clone git@github.com:niniaibu/gitskills.git
+
+创建分支并合并
+1. git checkout -b dev 加上-b参数表示创建并切换
+       相当于：git branch dev
+	           git checkout dev
+   git branch命令会列出所有分支，当前分支前面会标一个*号。
